@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+            --mainclr: #239f85;
+            --secclr: #ff5d22;
+            --third: #DFE4E0;
+            --mainafterclr: hsl(167, 81%, 79%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+            transition: .2s;
+            text-transform: capitalize;
+            text-decoration: none;
+
+        }
+
+        html {
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        body {
+
+            background: url(images/doctor-g024485840_1920.jpg);
+
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            position: relative;
+        }
+
+        .header {
+            padding: 1rem 7%;
+            background-color: var(--mainclr);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .header #logo {
+            width: 50px;
+        }
+
+
+
+        .navbar a::root {
+            --mainclr: #239f85;
+            --secclr: #ff5d22;
+            --third: #DFE4E0;
+            --mainafterclr: hsl(167, 81%, 79%);
+        }
+
+        .navbar a {
+            color: white;
+            font-size: 2.5rem;
+            margin-left: 3rem;
+            position: relative;
+
+        }
+
+        .navbar a:after {
+            content: '';
+            background: var(--secclr);
+            width: 0;
+            height: 3px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 5px;
+            transition: .3s;
+        }
+
+        .navbar a:hover:after {
+            content: '';
+            background: var(--secclr);
+            width: 100%;
+            height: 3px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 5px;
+        }
+
+        .icons div {
+            font-size: 2rem;
+            margin-right: 1rem;
+            color: white;
+            display: none;
+        }
+
+        .icons a {
+            color: white;
+            background: var(--secclr);
+            padding: 1.5rem 3rem;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            transition: .5s;
+        }
+
+        .icons a:hover {
+            background: transparent;
+            border: 1px solid var(--secclr);
+        }
+
+
+        form {
+            border: 3px solid #f1f1f1;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+        }
+
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .container form {
+            position: relative;
+            top: 101px;
+            width: 267px;
+        }
+
+        .container h2{
+            position: relative;
+            top: 84px;
+    font-size: 36px;
+        }
+        .signupbtn a{
+            text-decoration: none;
+            color: black;
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <img src="images/logo.png" id="logo" alt="">
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="index.html">about</a>
+            <a href="#services">services</a>
+            <a href="#our-gallery">gallery</a>
+            <a href="#contact-us">contact</a>
+        </nav>
+
+        <div class="icons">
+            <div id="menubar" class="fas fa-bars"></div>
+            <a href="#">contact</a>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Login Form</h2>
+
+        <form action="/action_page.php" method="post">
+
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <div class="container" style="background-color: #f1f1f1"><button type="button" class="signupbtn"><a href="sign.html">Sign Up</a> 
+                        </button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

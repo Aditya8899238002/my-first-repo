@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<style>
+    :root {
+            --mainclr: #239f85;
+            --secclr: #ff5d22;
+            --third: #DFE4E0;
+            --mainafterclr: hsl(167, 81%, 79%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+            transition: .2s;
+            text-transform: capitalize;
+            text-decoration: none;
+
+        }
+
+        html {
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        body {
+
+            background: url(images/doctor-g024485840_1920.jpg);
+
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            position: relative;
+        }
+
+        .header {
+            padding: 1rem 7%;
+            background-color: var(--mainclr);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .header #logo {
+            width: 50px;
+        }
+
+
+
+        .navbar a::root {
+            --mainclr: #239f85;
+            --secclr: #ff5d22;
+            --third: #DFE4E0;
+            --mainafterclr: hsl(167, 81%, 79%);
+        }
+
+        .navbar a {
+            color: white;
+            font-size: 2.5rem;
+            margin-left: 3rem;
+            position: relative;
+
+        }
+
+        .navbar a:after {
+            content: '';
+            background: var(--secclr);
+            width: 0;
+            height: 3px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 5px;
+            transition: .3s;
+        }
+
+        .navbar a:hover:after {
+            content: '';
+            background: var(--secclr);
+            width: 100%;
+            height: 3px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 5px;
+        }
+
+        .icons div {
+            font-size: 2rem;
+            margin-right: 1rem;
+            color: white;
+            display: none;
+        }
+
+        .icons a {
+            color: white;
+            background: var(--secclr);
+            padding: 1.5rem 3rem;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            transition: .5s;
+        }
+
+        .icons a:hover {
+            background: transparent;
+            border: 1px solid var(--secclr);
+        }
+
+
+    /* Full-width input fields */
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+
+    input[type=text]:focus,
+    input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+    hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+    }
+
+    /* Set a style for all buttons */
+    button {
+        background-color: #04AA6D;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+
+    button:hover {
+        opacity: 1;
+    }
+
+    /* Extra styles for the cancel button */
+    .cancelbtn {
+        padding: 14px 20px;
+        background-color: #f44336;
+    }
+
+    /* Float cancel and signup buttons and add an equal width */
+    .cancelbtn,
+    .signupbtn {
+        float: left;
+        width: 50%;
+    }
+
+    /* Add padding to container elements */
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .container form {
+        position: relative;
+        top: 101px;
+        width: 267px;
+    }
+
+    .container h1 {
+       padding-bottom: 7px;
+    }
+    .container  p{
+        font-size: 13px;
+    }
+
+    /* Clear floats */
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    /* Change styles for cancel button and signup button on extra small screens */
+    @media screen and (max-width: 300px) {
+
+        .cancelbtn,
+        .signupbtn {
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <header class="header">
+        <img src="images/logo.png" id="logo" alt="">
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="index.html">about</a>
+            <a href="#services">services</a>
+            <a href="#our-gallery">gallery</a>
+            <a href="#contact-us">contact</a>
+        </nav>
+
+        <div class="icons">
+            <div id="menubar" class="fas fa-bars"></div>
+            <a href="#">contact</a>
+        </div>
+    </header>
+    <div class="container">
+        <form action="/action_page.php" style="border:1px solid #ccc">
+            <div class="container-box">
+                <h1>Sign Up</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                <div class="clearfix">
+                    <button type="button" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
